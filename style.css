@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Arial&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #242a32;
+  width: 100%;
+  /* height: 100vh; */
+  font-family: "Montserrat", sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+header {
+  padding: 15px;
+}
+header h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 5vw;
+  font-weight: 700;
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 2px #0296e5;
+  -webkit-text-fill-color: #242a32;
+  cursor: pointer;
+}
+
+.search-bar {
+  align-items: center;
+  width: 100%;
+  padding: 5px 40px;
+}
+.search-bar .api,
+.search {
+  margin-bottom: 15px;
+  width: 100%;
+  background: #3a3f47;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar .api input[type="text"],
+.search input[type="text"] {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+.dashboard {
+  display: block;
+}
+.movies-list {
+  padding: 10px 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  align-items: center;
+  justify-content: space-evenly;
+  /* gap: 15px; */
+}
+.movie-card {
+  padding: 10px;
+  position: relative;
+  width: 200px;
+  transition: all 0.4s ease;
+}
+.movie-card img {
+  width: 100%;
+  position: relative;
+  left: 20px;
+}
+.name {
+  display: flex;
+  top: 120px;
+  align-items: self-start;
+  position: relative;
+  /* justify-content: space-between; */
+}
+.movie-card .index {
+  font-family: "Arial", sans-serif;
+  position: relative;
+  font-size: 8rem;
+  left: -5px;
+  bottom: 210px;
+  -webkit-text-stroke: 2px #0296e5;
+  -webkit-text-fill-color: #242a32;
+}
+.movie-card .title {
+  font-size: 16px;
+  position: relative;
+  color: white;
+  left: 15px;
+  bottom: 110px;
+  font-style: "Poppins", sans-serif;
+  font-weight: 700;
+  /* word-wrap: break-word; */
+}
+.movie-card .date {
+  color: white;
+  position: relative;
+  bottom: 50px;
+  left: 80px;
+}
+.movie-card:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+.loader {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.bar {
+  width: 10px;
+  height: 70px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1.2s linear infinite;
+}
+.bar1 {
+  animation-delay: 0.1s;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.3s;
+}
+.bar4 {
+  animation-delay: 0.4s;
+}
+.bar5 {
+  animation-delay: 0.5s;
+}
+.bar6 {
+  animation-delay: 0.6s;
+}
+.bar7 {
+  animation-delay: 0.7s;
+}
+.bar8 {
+  animation-delay: 0.8s;
+}
+
+.page_404 {
+  text-align: center;
+  padding: 0px 0;
+  /* background: #fff; */
+  font-family: "Arvo", serif;
+  padding: 0px 20vw;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 350px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #0296e5;
+  margin: 20px 0;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.contant_box_404 {
+  margin-top: -50px;
+}
+
+/* .movies-list.hide {
+  display: none;
+} */
+/* .loader.hide {
+  display: none;
+} */
+/* .page_404.hide {
+  display: none;
+} */
+#error{
+    display: none;
+}
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+    /* background: ; */
+  }
+  50% {
+    transform: scaleY(1);
+    background: #0296e5;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
